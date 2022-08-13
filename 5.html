@@ -34,12 +34,24 @@ Infinity делать не нужно, однако, в случае если б
   <script>
     "use strict";
 
+
     console.log(mathOperation(5, 3, "+"));
     console.log(mathOperation(5, 3, "-"));
     console.log(mathOperation(5, 3, "*"));
     console.log(mathOperation(5, 3, "/"));
     console.log(mathOperation(5, 3, ":)"));
 
+    /**
+     * Функция выполнияет заданную математическую операцию 
+     * с двумя переданными числами 
+     * @param {number} arg1 Первое число, над которым будет совершаться
+     * математическая операция
+     * @param {number} arg2 Второе число, над которым будет совершаться
+     * математическая операция
+     * @param {string} action Математическая операция, совершиаемая над
+     * числами
+     * @returns {number} Вернет результат математическая операции
+     */
     function mathOperation(arg1, arg2, action) {
       switch (action) {
         case '+':
@@ -53,20 +65,46 @@ Infinity делать не нужно, однако, в случае если б
       }
     }
 
+    /**
+     *
+     * @param {number} arg1 Первое слагаемое
+     * @param {number} arg2 Второе слагаемое
+     * @returns {number} Вернет результат сложения
+     */
     function sum(arg1, arg2) {
       return arg1 + arg2;
     }
 
+    /**
+     *
+     * @param {number} arg1 Число, из которого вычитаем
+     * @param {number} arg2 Число, которое вычитаем
+     * @returns {number} Вернет результат вычитаения 
+     */
     function sub(arg1, arg2) {
       return arg1 - arg2;
     }
+
+    /**
+     *
+     * @param {number} arg1 Первый множитель
+     * @param {number} arg2 Второй множитель
+     * @returns {number} Вернет результат умножения 
+     */
 
     function mult(arg1, arg2) {
       return arg1 * arg2;
     }
 
+    /**
+     *
+     * @param {number} arg1 Делимое
+     * @param {number} arg2 Делитель
+     * @returns {number} res Вернет результат деления
+     */
     function del(arg1, arg2) {
-      return (arg1 / arg2).toFixed(2);
+      const res = (arg1 / arg2).toFixed(2);
+      return Number(res);
     }
   </script>
 </body>
