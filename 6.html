@@ -28,12 +28,12 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     "use strict";
     console.log(declinationOfNumber(122, "яблоко", "яблока", "яблок"));
     console.log(declinationOfNumber(5, "мяч", "мяча", "мячей"));
-    console.log(declinationOfNumber(5, "стул", "стула", "стульев"))
+    console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     function declinationOfNumber(count, one, two, five) {
       const lastDigit = count % 10;
       switch (lastDigit) {
         case 0:
-          return five
+          return five;
         case 1:
           return one;
         case 2:
@@ -47,19 +47,11 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
         case 9:
           return five;
       }
-
-      // Число яблок, можно пробовать поставить свое целое, положительное число.
-      const applesNumber = 5;
-      // Получаем от функции одно из слов "яблоко", "яблока" или "яблок".
-      const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
-      // Выводим корректную строку, например:
-      // "У меня есть 1 яблоко."
-      // "У меня есть 2 яблока."
-      // "У меня есть 5 яблок."
-      // При любом целом, положительном числе в applesNumber, строка, которая
-      // выводится в console.log, должна иметь правильное склонение слова "яблоко".
-      console.log(`У меня есть ${applesNumber} ${word}.`);
     }
+    const applesNumber = 122;
+    const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+
+    console.log(`У меня есть ${applesNumber} ${word}.`);
   </script>
 </body>
 
