@@ -47,7 +47,7 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
         case 9:
           return five;
         default:
-          return 'Введите целое положительное число!';
+          throw new Error( 'Введите целое положительное число!');
       }
     }
 
