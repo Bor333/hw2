@@ -26,7 +26,7 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 -->
   <script>
     "use strict";
-    console.log(declinationOfNumber(122, "яблоко", "яблока", "яблок"));
+    console.log(declinationOfNumber(-1, "яблоко", "яблока", "яблок"));
     console.log(declinationOfNumber(5, "мяч", "мяча", "мячей"));
     console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     function declinationOfNumber(count, one, two, five) {
@@ -46,8 +46,11 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
         case 8:
         case 9:
           return five;
+        default:
+          throw new Error( 'Введите целое положительное число!');
       }
     }
+
     const applesNumber = 122;
     const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
 
